@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.game-container {
+    width: 70%;
+    background-color: green;
+}
+
+.side-container {
+    width: 30%;
+    background-color: rgb(95, 93, 93); /* Couleur de fond pour la visibilité */
+}
+#Inventaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}

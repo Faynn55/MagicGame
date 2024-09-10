@@ -1,0 +1,55 @@
+.feu-de-camp {
+    position: relative;
+    width: 100px; /*Width of campfire*/
+    height: 100px; /*Height of campfire*/
+    margin: 20px;
+}
+
+.bois {
+    width: 10px; /*Width of logs*/
+    height: 50px; /*Height of logs*/
+    background-color: #8B4513; /*Log color*/
+    position: absolute;
+    bottom: 0;
+}
+
+.bois1 {
+    transform: rotate(30deg);
+    left: 20px;
+}
+
+.bois2 {
+    transform: rotate(-30deg);
+    right: 20px;
+}
+
+.flamme {
+    position: absolute;
+    bottom: 50px; /*Position flames above logs*/
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid orange; /*Flame color*/
+    animation: flicker 0.3s infinite alternate;
+}
+
+.flamme::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid yellow; /*Inner flame color*/
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
